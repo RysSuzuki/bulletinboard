@@ -14,7 +14,6 @@ class LettersController < ApplicationController
   def create
     @letter = Letter.new(letter_params)
     if @letter.save
-      binding.pry
      redirect_to action: 'index'
     else
      render 'index'
