@@ -16,7 +16,7 @@ class LettersController < ApplicationController
     if @letter.save
      redirect_to action: 'index'
     else
-     render 'index'
+     render 'new'
     end
   end
 
