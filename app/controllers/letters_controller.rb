@@ -1,17 +1,19 @@
 class LettersController < ApplicationController
- before_action :set_letter, only: [:show, :edit, :update, :destroy] # destroyアクションを追加
+ before_action :set_letter, only: [:edit, :update, :destroy] # destroyアクションを追加
 
   def index
     @letter = Letter.all
-  end
-
-  def show
   end
 
   def edit
   end
 
   def update
+    if @letter.update(letter_params)
+      redirect_to letters_path, notice: "ブログを編集しました！"
+    else
+      render 'edit'
+    end
   end
 
   def new
