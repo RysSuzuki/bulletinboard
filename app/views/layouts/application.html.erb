@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <title>Bulletinboard</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+    <header>
+      <ul class=left_header>
+        <li class="left"><a href="/letters">トップページ</a></li>
+      </ul>
+      <ul class=right_header>
+        <li class="right"><a href="/letters/new">お手紙投稿</a></li>
+      </ul>
+    </header>　
+
     <%= yield %>
   </body>
+  <footer>
+    <p class=footer_option>@Suzuki Ryusei</p>
+  </footer>
 </html>
