@@ -1,0 +1,57 @@
+header {
+ background-color: #4D4D4D;
+ height: 60px;
+}
+
+header ul {
+  margin: 5px;
+  padding: 0;
+}
+
+header ul a {
+  color: white;
+  text-decoration: none;
+}
+
+header ul a:hover{
+  text-decoration: underline;
+}
+
+header li {
+   list-style: none;
+   padding: 10px;
+}
+
+
+.left_header{
+  float: left;
+}
+
+.right_header{
+  float:right;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: left;
+}
+
+footer {
+/* footer部分の実装 */
+  background-color: #4D4D4D;
+  height: 50px;
+  width: 100%;
+}
+
+footer p {
+  color: white;
+  margin-top: 0;
+
+}
+
+.footer_option{
+  padding-top: 20px;
+}

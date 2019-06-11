@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       end
   member do
         patch :confirm
+        post :update
       end
   end
 end
