@@ -8,6 +8,10 @@ class LettersController < ApplicationController
   def edit
   end
 
+  def show
+    render 'edit'
+  end
+
   def update
     if @letter.update(letter_params)
       redirect_to letters_path, notice: "ブログを編集しました！"
@@ -27,9 +31,9 @@ class LettersController < ApplicationController
   def create
     @letter = Letter.new(letter_params)
     if @letter.save
-     redirect_to action: 'index'
+      redirect_to action: 'index'
     else
-     render 'new'
+      render 'new'
     end
   end
 

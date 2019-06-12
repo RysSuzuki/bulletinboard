@@ -1,14 +1,11 @@
 <h1>つぶやき一覧画面</h1>
 <p><%= notice %></p>
 
-<table>
 <% @letter.each do |letter| %>
-  <tr>
-    <td><%= letter.content %></td>
-    <td><%= link_to '投稿を削除する', letter_path(letter.id), method: :delete,data: { confirm: '本当に編集していいですか？' } %></td>
-    <td><%= link_to '投稿を編集する', edit_letter_path(letter.id) %></td>
-  </tr>
+  <p><%= letter.content %></p>
+    <p><%= link_to '削除', letter_path(letter.id), method: :delete,data: { confirm: '本当に削除していいですか？' } %>  
+       <%= link_to '編集', edit_letter_path(letter.id),method: :delete,data: { confirm: '本当に編集していいですか？' } %></p>
 <% end %>
-</table>
 
-<%= link_to '新しくブラグを投稿する', new_letter_path %>
+
+<%= link_to '新しく投稿する', new_letter_path %>

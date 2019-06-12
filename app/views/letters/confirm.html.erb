@@ -5,7 +5,7 @@
   <%= form.submit  "投稿する" %>
 <% end %>
 
-<%= form_with(model: @letter, url: new_letter_path, local: true, method: 'get') do |form| %>
+<%= form_with(model: @letter, url: confirmback_new_or_edit(params[:id]) , local: true,method: 'get') do |form| %>
   <%= form.hidden_field :content %>
   <%= form.submit "戻る",name: 'back' %>
 <% end %>
