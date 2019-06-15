@@ -13,9 +13,9 @@
 
   <div class="letter_title">
     <%= form.label :content %>
-    <%= form.text_field :content %>
+    <%= form.text_area :content %>
   </div>
-  <%= form.submit %>
+  <%= form.submit name: action_name  %>
 <% end %>
 
 

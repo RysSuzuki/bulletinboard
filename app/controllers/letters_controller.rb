@@ -1,15 +1,11 @@
 class LettersController < ApplicationController
- before_action :set_letter, only: [:edit, :update, :destroy] # destroyアクションを追加
+ before_action :set_letter, only: [:edit, :update, :destroy]
 
   def index
     @letter = Letter.all
   end
 
   def edit
-  end
-
-  def show
-    render 'edit'
   end
 
   def update
@@ -44,12 +40,19 @@ class LettersController < ApplicationController
 
   def confirm
     @letter = Letter.new(letter_params)
+    if @letter.invalid?
+      if params[:new]
+        render 'new'
+      else
+        render 'edit'
+      end
+   end
   end
 
   private
 
   def letter_params
-        params.require(:letter).permit(:content)
+    params.require(:letter).permit(:content)
   end
 
   def set_letter

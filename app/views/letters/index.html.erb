@@ -3,8 +3,8 @@
 
 <% @letter.each do |letter| %>
   <p><%= letter.content %></p>
-    <p><%= link_to '削除', letter_path(letter.id), method: :delete,data: { confirm: '本当に削除していいですか？' } %>  
-       <%= link_to '編集', edit_letter_path(letter.id),method: :delete,data: { confirm: '本当に編集していいですか？' } %></p>
+    <p><%= link_to '削除', letter_path(letter.id), method: :delete,data: { confirm: '本当に削除していいですか？' } %>
+       <%= link_to '編集', edit_letter_path(letter.id),data: { confirm: '本当に編集していいですか？' } %></p>
 <% end %>
 
 
