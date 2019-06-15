@@ -40,7 +40,6 @@ header li {
 }
 
 footer {
-/* footer部分の実装 */
   background-color: #4D4D4D;
   height: 50px;
   width: 100%;
@@ -54,4 +53,13 @@ footer p {
 
 .footer_option{
   padding-top: 20px;
+}
+
+.content{
+  margin: 10px;
+}
+
+.content p{
+  margin:0;
+  background-color: #D9E5FF;
 }

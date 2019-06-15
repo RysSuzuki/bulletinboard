@@ -1,11 +1,14 @@
 class LettersController < ApplicationController
- before_action :set_letter, only: [:edit, :update, :destroy]
+ before_action :set_letter, only: [:edit,:show, :update, :destroy]
 
   def index
     @letter = Letter.all
   end
 
   def edit
+  end
+
+  def show
   end
 
   def update
